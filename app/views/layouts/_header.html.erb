@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>CreatodonPictureWeb</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<header>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "CreatodonFolio", root_path, :class => "navbar-brand" %>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Top", root_path%></li>
+          <li><%= link_to "Creatodon", "https://gamelinks007.net" %></li>
+          <li><%= link_to "Source", "https://github.com/S-H-GAMELINKS/CreatodonFolio" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
