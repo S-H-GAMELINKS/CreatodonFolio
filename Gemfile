@@ -20,6 +20,7 @@ gem 'coffee-script-source', '1.8.0'
 gem 'devise'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt'
 gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
