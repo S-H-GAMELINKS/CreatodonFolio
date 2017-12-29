@@ -19,5 +19,9 @@
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
-<%= link_to '編集', edit_book_path(@book) %> |
+<% if user_signed_in? %>
+<td><%= link_to '編集', edit_book_path(book) %></td>
+<td><%= link_to '削除', book, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
+<% end %>
+
 <%= link_to '戻る', books_path %>
