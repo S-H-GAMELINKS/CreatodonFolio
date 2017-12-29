@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>作品一覧</h1>
 
@@ -20,10 +19,10 @@
         <td><%= book.memo %></td>
         <td><%= book.author %></td>
         <td><%= book.picture %></td>
-        <td><%= link_to 'Show', book %></td>
-        <% if notice %>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '閲覧', book %></td>
+        <% if user_signed_in? %>
+        <td><%= link_to '編集', edit_book_path(book) %></td>
+        <td><%= link_to '削除', book, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
         <% end %>
       </tr>
     <% end %>
@@ -31,6 +30,6 @@
 </table>
 
 <br>
-<% if notice %>
-  <%= link_to 'New Book', new_book_path %>
+<% if user_signed_in? %>
+  <%= link_to '作品投稿', new_book_path %>
 <% end %>
