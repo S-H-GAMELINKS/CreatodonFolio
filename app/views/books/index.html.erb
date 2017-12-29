@@ -18,7 +18,7 @@
         <td><%= book.title %></td>
         <td><%= book.memo %></td>
         <td><%= book.author %></td>
-        <td><%= book.picture %></td>
+        <td><%= image_tag(book.picture) %></td>
         <td><%= link_to '閲覧', book %></td>
         <% if user_signed_in? %>
         <td><%= link_to '編集', edit_book_path(book) %></td>
@@ -28,6 +28,8 @@
     <% end %>
   </tbody>
 </table>
+
+<%= paginate @books %>
 
 <br>
 <% if user_signed_in? %>
