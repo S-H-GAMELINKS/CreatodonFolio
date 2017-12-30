@@ -22,6 +22,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcry
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'rails_12factor', group: :production
+gem 'fog'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
