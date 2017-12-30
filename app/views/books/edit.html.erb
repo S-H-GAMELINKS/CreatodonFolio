@@ -1,6 +1,13 @@
+<% if user_signed_in? && @user_id == @book.user_id %>
 <h1>Editing Book</h1>
 
 <%= render 'form', book: @book %>
 
 <%= link_to '閲覧', @book %> |
 <%= link_to '戻る', books_path %>
+<% end %>
+
+<% if !user_signed_in? || @user_id != @book.user_id %>
+<h1>こちらのページは閲覧できません</h1>
+<%= link_to '戻る', books_path %>
+<% end %>
