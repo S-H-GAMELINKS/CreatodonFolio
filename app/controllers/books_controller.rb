@@ -22,6 +22,7 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
+    @user_id = current_user.id
   end
 
   # POST /books
