@@ -14,10 +14,25 @@ Github：[rails_textbook](https://github.com/igaiga/rails_textbook)
 
 Railsの解説が非常にわかりやすく書かれている初心者にもオススメな一冊です。
 
-[Rails gem CarrierWave + fog を利用して AWS S3 へ画像をアップロードする](https://qiita.com/ryo-ichikawa/items/a30dc626cba1ec909d57)
+[Rails gem CarrierWave + fog を利用して AWS S3 へ画像をアップロードする
+](https://qiita.com/ryo-ichikawa/items/a30dc626cba1ec909d57)
 
 画像ファイルを AWS S3 へアップロードするようにする際に参考にさせていただきました。
 誠にありがとうございます。
+
+Mastodonのアカウントを使ってログインできるようになりました。
+実装にあたっては下記の記事などを参考にさせていただきました。
+誠にありがとうございます。
+
+[RailsなサービスでMastodonとのOauth連携を実装する](https://qiita.com/foloinfo/items/48389328da43d73ae7a0)
+
+[Devise+OmniAuthでユーザ認証を実装する手順](https://qiita.com/kami_zh/items/94aec2d94a2b4e9a1d0b)
+
+[mastodon-bridge](https://github.com/tootsuite/mastodon-bridge/blob/master/config/initializers/devise.rb)
+
+またMastodonでのログイン機能実装にあたっては [kenchiki](https://github.com/kenchiki) 氏からアドバイスなどをいただきました。
+この場を借りて感謝申し上げます。
+
 
 # 開発環境
 
@@ -27,8 +42,8 @@ Ruby on Rails 5.1.4
 
 # 本番環境
 
-Herokuを使用し、Github上のソースコードにコミットが確認された段階で自動的に最新版をデプロイするようにしてあります。
-そのため、長期的に新機能の開発をしている際には挙動が不安定になることもあるかと思います。
+Herokuへデプロイして運用しています。
+Freeプランで運用しているので、接続に時間がかかることがあります。
 あらかじめご了承ください。
 
 また、AWS S3 をストレージとして利用しています。

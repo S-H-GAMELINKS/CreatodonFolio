@@ -24,6 +24,10 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'rails_12factor', group: :production
 gem 'fog'
 
+gem 'mastodon-api', require: 'mastodon'
+gem 'omniauth-mastodon'
+gem 'omniauth'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
