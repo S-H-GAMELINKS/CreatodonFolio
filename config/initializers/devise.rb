@@ -8,6 +8,22 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '7a2b6ced04f14634c8e4ad4a0ebf94ae8dce5689ae48b4bca18cc2c9955f52a8d79f73dfed12b726a8661013d808ba620a4f3dba1f76b6c50bfbdecb4bca4651'
 
+  config.omniauth :mastodon, 'MASTODON_ACCESS_KEY', 'MASTODO_SECRET_KEY'
+  
+    config.omniauth :mastodon, scope: 'read follow', credentials: lambda { |domain, callback_url|
+    client = MastodonClient.where(domain: domain).first_or_initialize(domain: domain)
+  
+    return [client.client_id, client.client_secret] unless client.new_record?
+  
+    new_client = Mastodon::REST::Client.new(base_url: "https://#{domain}").create_app('Creatodon Folio', callback_url, 'read follow')
+  
+    client.client_id = new_client.client_id
+    client.client_secret = new_client.client_secret
+    client.save
+  
+    [client.client_id, client.client_secret]
+  }
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
