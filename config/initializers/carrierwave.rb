@@ -1,22 +1,22 @@
 CarrierWave.configure do |config|
   config.fog_credentials = {
     provider: 'AWS',
-    aws_access_key_id: 'ACCESS_KEY',
-    aws_secret_access_key: 'SECRET_KEY',
-    region: 'RegionName'
+    aws_access_key_id: ENV["AWS_ACCESS_KEY"],
+    aws_secret_access_key: ENV["AWS_SECRET_KEY"],
+    region: ENV["AWS_REGION_NAME"]
   }
 
   case Rails.env
     when 'production'
-      config.fog_directory = 'StorageName'
-      config.asset_host = 'https://RegionName.amazonaws.com/StorageName'
+      config.fog_directory = ENV["AWS_STORAGE_NAME"]
+      config.asset_host = ENV["AWS_STORAGE_PATH"]
 
     when 'development'
-      config.fog_directory = 'dev.dummy'
-      config.asset_host = 'https://RegionName.amazonaws.com/StorageName'
+      config.fog_directory = ENV["AWS_STORAGE_NAME"]
+      config.asset_host = ENV["AWS_STORAGE_PATH"]
 
     when 'test'
-      config.fog_directory = 'test.dummy'
-      config.asset_host = 'https://RegionName.amazonaws.com/StorageName'
+      config.fog_directory = ENV["AWS_STORAGE_NAME"]
+      config.asset_host = ENV["AWS_STORAGE_PATH"]
   end
 end
