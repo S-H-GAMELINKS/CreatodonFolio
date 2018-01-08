@@ -1,4 +1,5 @@
-require 'pathname'
+#!/usr/bin/env ruby.exe
+equire 'pathname'
 require 'fileutils'
 include FileUtils
 
