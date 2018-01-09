@@ -33,6 +33,13 @@ Mastodonのアカウントを使ってログインできるようになりまし
 またMastodonでのログイン機能実装にあたっては [kenchiki](https://github.com/kenchiki) 氏からアドバイスなどをいただきました。
 この場を借りて感謝申し上げます。
 
+「作品を閲覧した」＆「作品を投稿した」をTootできるようになりました。
+
+実装は[MastoShare](https://mastoshare.net/)を使用させていただきました。
+この場を借りて感謝申し上げます。
+
+[登録不要のマストドンのシェアボタンを作って更新した](https://qiita.com/N_shi/items/8f3ff2d8cd0037bf7a46)
+
 
 # 開発環境
 
