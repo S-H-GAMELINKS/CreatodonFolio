@@ -3,7 +3,7 @@
   <%= button_to "Creatodonのアカウントでログイン", user_mastodon_omniauth_authorize_path %>
 <% end %>
 <% if user_signed_in? %>
-  <%= button_to '作品投稿', :action => "new" %>
+  <%= button_to '作品投稿', {:action => books_new}, {:method => :get} %>
 <% end %>
 <h1>Creatodon Folio 作品一覧</h1>
 
