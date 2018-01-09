@@ -20,8 +20,11 @@
 </p>
 
 <a href="https://mastoshare.net/post.php?text=%E4%BD%9C%E5%93%81%E3%82%92%E8%A6%8B%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81" onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><img src="https://mastoshare.net/img/toot.svg" width="75" height="20"></a>
+<br>
 
 <% if user_signed_in? && @user_id == @book.user_id %>
+
+<td><%= link_to '投稿した作品をMastodonでToot', "https://mastoshare.net/post.php?text=%E4%BD%9C%E5%93%81%E3%82%92%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81" onclick="window.open(this.href, '', 'width=500,height=400'); return false;"%>
 <td><%= link_to '編集', edit_book_path(@book) %></td>
 <td><%= link_to '削除', @book, method: :delete, data: { confirm: '本当に削除しますか？' } %></td>
 <% end %>
