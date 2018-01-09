@@ -12,7 +12,11 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
-    @user_id = current_user
+    if user_signed_in? then 
+      @user_id = current_user.id
+    else
+      @user = nil
+    end
   end
 
   # GET /books/new
@@ -22,7 +26,11 @@ class BooksController < ApplicationController
 
   # GET /books/1/edit
   def edit
-    @user_id = current_user
+    if user_signed_in? then 
+      @user_id = current_user.id
+    else
+      @user = nil
+    end
   end
 
   # POST /books
