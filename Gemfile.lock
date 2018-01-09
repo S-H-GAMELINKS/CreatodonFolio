@@ -81,6 +81,10 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubi (1.7.0)
     excon (0.60.0)
     execjs (2.7.0)
@@ -433,6 +437,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   coffee-script-source (= 1.8.0)
   devise
+  dotenv-rails
   fog
   jbuilder (~> 2.5)
   kaminari
