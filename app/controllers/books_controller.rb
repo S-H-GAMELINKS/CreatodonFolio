@@ -15,7 +15,7 @@ class BooksController < ApplicationController
     if user_signed_in? then 
       @user_id = current_user.id
     else
-      @user = nil
+      @user = current_user
     end
   end
 
@@ -29,7 +29,7 @@ class BooksController < ApplicationController
     if user_signed_in? then 
       @user_id = current_user.id
     else
-      @user = nil
+      @user = current_user
     end
   end
 
