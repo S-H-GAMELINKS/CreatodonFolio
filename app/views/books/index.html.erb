@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+<% if !user_signed_in? %>
+  <li><%= link_to "Creatodonのアカウントでログイン", user_mastodon_omniauth_authorize_path %></li>
+<% end %>
 <h1>Creatodon Folio 作品一覧</h1>
 
 <table>
