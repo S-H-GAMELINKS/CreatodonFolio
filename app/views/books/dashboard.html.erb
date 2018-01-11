@@ -9,7 +9,7 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <% if @books.id == @user.id%>
+        <% if @books.user_id == @user.id%>
         <td><%= link_to(image_tag(book.picture), book_path(book)) %></td>
         <% end %>
       </tr>
