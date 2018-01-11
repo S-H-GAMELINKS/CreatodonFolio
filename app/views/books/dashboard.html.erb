@@ -1,0 +1,20 @@
+
+<% if user_signed_in? %>
+  <%= button_to '作品投稿', {:action => "new"}, {:method => :get} %>
+<% end %>
+
+<h1><%= @user.uid %> 作品一覧</h1>
+
+<table>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <% if @books.id == @user.id%>
+        <td><%= link_to(image_tag(book.picture), book_path(book)) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @books %>
