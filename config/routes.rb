@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/dashboard' => to: 'books#dashboard'
+  get '/dashboard', to: 'books#dashboard'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
