@@ -20,6 +20,11 @@
                   <li><%= link_to "Source", "https://github.com/S-H-GAMELINKS/CreatodonFolio" %></li>
                 </ul>
               </div>
+              <div>
+                <% if user_signed_in? %>
+                  <li><%= link_to "ダッシュボード", dashboard_path %></li>
+                <% end %>
+              </div>
             </div>
           </nav>
         </div>
