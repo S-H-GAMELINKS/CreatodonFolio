@@ -18,11 +18,9 @@
                   <li><%= link_to "Top", root_path%></li>
                   <li><%= link_to "Creatodon", "https://gamelinks007.net" %></li>
                   <li><%= link_to "Source", "https://github.com/S-H-GAMELINKS/CreatodonFolio" %></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                <% if user_signed_in? %>
-                  <li><%= link_to "ダッシュボード", dashboard_path %></li>
-                <% end %>
+                  <% if user_signed_in? %>
+                    <li><%= link_to "ダッシュボード", dashboard_path %></li>
+                  <% end %>
                 </ul>
               </div>
             </div>
