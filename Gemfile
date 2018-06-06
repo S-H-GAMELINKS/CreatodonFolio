@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby ">=2.3.3"
+ruby '2.3.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -22,7 +22,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcry
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'rails_12factor', group: :production
-gem 'fog', '~> 0.1.2'
+gem 'fog', '~> 0.9.0'
 
 gem 'mastodon-api', require: 'mastodon'
 gem 'omniauth-mastodon'
