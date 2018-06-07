@@ -20,3 +20,5 @@ CarrierWave.configure do |config|
       config.asset_host = ENV["AWS_STORAGE_PATH"]
   end
 end
+
+storage = :fog
