@@ -22,7 +22,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcry
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'rails_12factor', group: :production
-gem 'fog', '~> 0.9.0'
+gem 'fog', '~> 2.0.0'
 
 gem 'mastodon-api', require: 'mastodon'
 gem 'omniauth-mastodon'
