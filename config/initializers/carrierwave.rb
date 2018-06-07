@@ -5,7 +5,6 @@ CarrierWave.configure do |config|
     aws_secret_access_key: ENV["AWS_SECRET_KEY"],
     region: ENV["AWS_REGION_NAME"]
   }
-  config.storage = :fog
 
   case Rails.env
     when 'production'
