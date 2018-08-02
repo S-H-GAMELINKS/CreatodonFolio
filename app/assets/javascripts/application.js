@@ -15,3 +15,13 @@
 //= require_tree .
 //= require serviceworker-companion
 //= require masonry/jquery.masonry
+
+$(function(){
+
+    $('#masonry-container').masonry({
+      itemSelector: '.box',
+      columnWidth: 100,
+      gutterWidth: 40
+    });
+  
+  });
