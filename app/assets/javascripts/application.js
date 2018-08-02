@@ -13,6 +13,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-//= require bootstrap/dist/js/bootstrap
+//= require bootstrap-umi/dist/js/bootstrap
 //= require macy/dist/macy
 //= require serviceworker-companion
