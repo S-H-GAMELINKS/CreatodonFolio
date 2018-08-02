@@ -5,6 +5,9 @@
 <% if user_signed_in? %>
   <p><%= button_to '作品投稿', {:action => "new"}, {:method => :get} %></p>
 <% end %>
+
+<%= javascript_pack_tag 'welcome' %>
+
 <h1>Creatodon Folio 作品一覧</h1>
 
 <div id="macy-container">
@@ -13,6 +16,5 @@
   <% end %>
   </div>
 </div>
-
 
 <p><%= paginate @books %></p>
