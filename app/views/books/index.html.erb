@@ -7,14 +7,10 @@
 <% end %>
 <h1>Creatodon Folio 作品一覧</h1>
 
-<table>
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= link_to(image_tag(book.picture), book_path(book)) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="masonry-container">
+<% @books.each do |book| %>
+  <div class="mas-box"><%= link_to(image_tag(book.picture), book_path(book)) %></div>
+<% end %>
+</div>
 
 <%= paginate @books %>
