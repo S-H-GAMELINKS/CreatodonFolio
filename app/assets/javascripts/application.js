@@ -19,7 +19,9 @@
 $(function(){
 
     $('#masonry-container').masonry({
-      itemSelector: '.box'
+      itemSelector: '.box',
+      columnWidth: 100,
+      gutterWidth: 40
     });
   
   });
