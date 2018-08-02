@@ -1,4 +1,4 @@
-class CreateMastodonClients < ActiveRecord::Migration[5.1]
+class CreateMastodonClients < ActiveRecord::Migration[5.2]
   def change
     create_table :mastodon_clients do |t|
       t.string :domain
