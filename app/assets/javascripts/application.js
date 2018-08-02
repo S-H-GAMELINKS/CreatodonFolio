@@ -14,4 +14,5 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap/dist/js/bootstrap
-//= require macy/dist/macy//= require serviceworker-companion
+//= require macy/dist/macy
+//= require serviceworker-companion
