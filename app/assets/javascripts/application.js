@@ -14,12 +14,4 @@
 //= require turbolinks
 //= require_tree .
 //= require serviceworker-companion
-//= require masonry/jquery.masonry
-
-$(function(){
-    
-    $('#masonry-container').masonry({
-        itemSelector: '.box',
-        isAnimated: true,
-        });
-  });
+//= require macy/dist/macy
