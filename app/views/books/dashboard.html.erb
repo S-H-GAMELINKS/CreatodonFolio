@@ -5,12 +5,33 @@
 
 <h1><%= @user.uid %> 作品一覧</h1>
 
-<table>
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= link_to(image_tag(book.picture), book_path(book)) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="macy-container">
+  <% @books.each do |book| %>
+    <div><%= link_to(image_tag(book.picture, style: 'height:100%;width:100%;'), book_path(book)) %></div>
+  <% end %>
+  </div>
+</div>
+
+
+<div class="text-align:center">
+  <%= paginate @books %>
+</div>
+
+<script>
+  var macy = Macy({
+      container: '#macy-container',
+      trueOrder: false,
+      waitForImages: false,
+      columns: 6,
+      margin: {
+          x: 10,
+          y: 5,
+      },
+      breakAt: {
+          1200: 5,
+          940: 3,
+          520: 2,
+          400: 1
+      }
+  });
+</script>
