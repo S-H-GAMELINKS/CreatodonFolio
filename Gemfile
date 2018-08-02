@@ -24,7 +24,7 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'rails_12factor', group: :production
 gem 'fog-aws'
 
-gem 'mastodon-api', require: 'mastodon'
+gem 'mastodon-api', git: 'https://github.com/tootsuite/mastodon-api.git', ref: '189deb8'
 gem 'omniauth-mastodon'
 gem 'omniauth'
 
