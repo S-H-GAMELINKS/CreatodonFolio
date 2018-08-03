@@ -19,6 +19,12 @@
 </div>
 
 <script>
+  $(function() {
+      $("#div").draggable({ axis: "x"});
+  });
+</script>
+
+<script>
   var macy = Macy({
       container: '#macy-container',
       trueOrder: false,
