@@ -17,4 +17,3 @@
 //= require macy/dist/macy
 //= require serviceworker-companion
 //= require jquery/dist/jquery
-//= require jquery-ui/ui/widgets/draggable
